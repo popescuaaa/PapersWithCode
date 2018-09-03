@@ -1,0 +1,4826 @@
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Papers with Code : the latest in machine learning</title>
+  <meta name="description" content="Papers with Code highlights trending ML research and the code to implement it." />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <meta property="og:title" content="Papers with Code : the latest in machine learning">
+  <meta property="og:description" content="Papers with Code highlights trending ML research and the code to implement it.">
+  <meta property="og:image" content="https://paperswithcode.com/static/default.gif">
+  <meta property="og:url" content="https://paperswithcode.com">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="boostrap.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+  <script src="https://unpkg.com/ionicons@4.1.2/dist/ionicons.js"></script>
+
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121182717-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-121182717-1');
+    </script>
+  
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white header">
+  <div class="header-logo">
+    <a class="navbar-brand" href="">
+      <ion-icon name="barcode"></ion-icon>
+    </a>
+  </div>
+  <div class="header-logo-text">
+    <a href="/">Papers with Code</a>
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse order-1" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item header-search">
+        <form action="search" method="get">
+          <input name='q' class="icon global-search" type="search" placeholder='Try &quot;GANs&quot;'></input>
+        </form>
+      </li>
+    </ul>
+    <div class="order-3">
+      <ul class="navbar-nav ml-auto navbar-subscribe">
+        <button type="submit" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#emailModal">Subscribe to Weekly Digest</button>
+      </ul>
+    </div>
+  </div>
+
+
+</nav>
+
+<div class="container">
+
+
+  <div class="container content">
+
+    
+  
+  
+  
+  
+
+  
+
+
+  <div class="list-title">
+
+    <div class="container title-container">
+      <div class="row title-row">
+        <div class="col-lg">
+          <h1>Trending Research</h1>
+          <div class="list-title-subtitle">
+            Ordered by accumulated GitHub stars in last 3 days
+          </div>
+        </div>
+        <div class="col-lg-4">
+
+          <div style="float: right;" class="btn-group btn-group-sm pull-right" role="group" aria-label="Basic example">
+            
+              <a href="/" class="btn btn-primary list-button-active">Trending</a>
+            
+
+            
+              <a href="./latest" class="btn btn-primary list-button">Latest</a>
+            
+
+
+            
+              <a href="./greatest" class="btn btn-primary list-button">Greatest</a>
+            
+
+            <button type="button" class="btn btn-primary list-button" data-toggle="modal" data-target="#emailModal">
+              Subscribe
+            </button>
+
+            <div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="emailModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title" id="emailModalLabel">Get the weekly digest</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="modal-body-info-text">
+                      We'll send you a weekly digest of trending and latest papers with code.
+                    </div>
+                    <form action="" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='49kNMbR8gSCoSPYm5ctKgy1sqbqtaLl0qCxnHNVpZKyWpZSpjnR0lwZ3bHVujo1j' />
+
+                      <input placeholder="Enter your email" type="text" class="form-control pwc-email" name="address" id="id_address" max_length="100" required>
+
+
+
+
+                  </div>
+                  <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="subscribeModal" tabindex="-1" role="dialog" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="subscribeModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+
+                    <form class="form-inline justify-content-center" action="" method="post">
+                      <input type='hidden' name='csrfmiddlewaretoken' value='49kNMbR8gSCoSPYm5ctKgy1sqbqtaLl0qCxnHNVpZKyWpZSpjnR0lwZ3bHVujo1j' />
+
+                      <div class="form-group mx-sm-3 mb-2">
+                        <input placeholder="Enter your email" type="text" class="form-control pwc-email" name="address" id="id_address" max_length="100" required>
+                      </div>
+
+
+
+
+                  </div>
+                  <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary mb-2 pwc-button">Subscribe to weekly digests</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          1
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  <img class="card-img-top" src="https://s3.amazonaws.com/arrival/toy_illustration_3principles_crop.png" alt="Card image cap">
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Phrase-Based &amp; Neural Unsupervised Machine Translation</h5>
+              <!-- 33220 -->
+              <small>Machine translation systems achieve near human-level performance on some languages, yet their effectiveness strongly relies on the availability of large amounts of parallel sentences, which hinders their applicability to the majority of language pairs. On low-resource languages like English-Urdu and English-Romanian, our methods achieve even better results than semi-supervised and supervised approaches leveraging the paucity of available bitexts.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                593
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.50 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1804.07755v2" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/facebookresearch/UnsupervisedMT" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/pytorch.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          2
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  <img class="card-img-top" src="https://s3.amazonaws.com/arrival/toy_illustration_3principles_crop.png" alt="Card image cap">
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Unsupervised Machine Translation Using Monolingual Corpora Only</h5>
+              <!-- 33221 -->
+              <small>Machine translation has recently achieved impressive performance thanks to recent advances in deep learning and the availability of large-scale parallel corpora. By learning to reconstruct in both languages from this shared feature space, the model effectively learns to translate without using any labeled data.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                593
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.50 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1711.00043v2" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/facebookresearch/UnsupervisedMT" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/pytorch.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          3
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  <img class="card-img-top" src="https://raw.githubusercontent.com/NVIDIA/OpenSeq2Seq/master/./docs/logo-shadow.png" alt="Card image cap">
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>OpenSeq2Seq: extensible toolkit for distributed and mixed precision
+  training of sequence-to-sequence models</h5>
+              <!-- 16196 -->
+              <small>We present OpenSeq2Seq -- an open-source toolkit for training sequence-to-sequence models. The main goal of our toolkit is to allow researchers to most effectively explore different sequence-to-sequence architectures.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                334
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.47 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1805.10387v1" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/NVIDIA/OpenSeq2Seq" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/tf.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          4
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  <img class="card-img-top" src="https://storage.googleapis.com/ultralytics/UltralyticsLogoName1000×676.png" alt="Card image cap">
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>YOLOv3: An Incremental Improvement</h5>
+              <!-- 35187 -->
+              <small>At 320x320 YOLOv3 runs in 22 ms at 28.2 mAP, as accurate as SSD but three times faster. As always, all the code is online at https://pjreddie.com/yolo/</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                282
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.33 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1804.02767v1" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/ultralytics/yolov3" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/pytorch.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          5
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  <img class="card-img-top" src="https://www.tensorflow.org/images/tf_logo_transp.png" alt="Card image cap">
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>TensorFlow: Large-Scale Machine Learning on Heterogeneous Distributed
+  Systems</h5>
+              <!-- 24032 -->
+              <small>TensorFlow is an interface for expressing machine learning algorithms, and an implementation for executing such algorithms. A computation expressed using TensorFlow can be executed with little or no change on a wide variety of heterogeneous systems, ranging from mobile devices such as phones and tablets up to large-scale distributed systems of hundreds of machines and thousands of computational devices such as GPU cards.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                108,669
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.28 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1603.04467v2" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/tensorflow/tensorflow" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/tf.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          6
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  <div class="card-img-top">
+                    <iframe width="100%" src="https://www.youtube.com/embed/GrP_aOSXt5U" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                  </div>
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Video-to-Video Synthesis</h5>
+              <!-- 34393 -->
+              <small>We study the problem of video-to-video synthesis, whose goal is to learn a mapping function from an input source video (e.g., a sequence of semantic segmentation masks) to an output photorealistic video that precisely depicts the content of the source video. Without understanding temporal dynamics, directly applying existing image synthesis approaches to an input video often results in temporally incoherent videos of low visual quality.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                3,208
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.27 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1808.06601v1" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/NVIDIA/vid2vid" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/pytorch.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          7
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  
+                    <img class="card-img-top" src="static/thumbs/1807.10201.jpg"  alt="Card image cap">
+                  
+
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>A Style-Aware Content Loss for Real-time HD Style Transfer</h5>
+              <!-- 31591 -->
+              <small>Recently, style transfer has received a lot of attention. These and our qualitative results ranging from small image patches to megapixel stylistic images and videos show that our approach better captures the subtle nature in which a style affects content.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                74
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.22 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1807.10201v2" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/CompVis/adaptive-style-transfer" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/tf.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          8
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  <img class="card-img-top" src="https://raw.githubusercontent.com/AlexEMG/DeepLabCut/master/docs/images/githubfig-01-01.png" alt="Card image cap">
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Markerless tracking of user-defined features with deep learning</h5>
+              <!-- 2305 -->
+              <small>Quantifying behavior is crucial for many applications in neuroscience. Videography provides easy methods for the observation and recording of animal behavior in diverse settings, yet extracting particular aspects of a behavior for further analysis can be highly time consuming.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                241
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.21 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1804.03142v1" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/AlexEMG/DeepLabCut" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/tf.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          9
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  <img class="card-img-top" src="https://raw.githubusercontent.com/jhfjhfj1/autokeras/master/logo.png?raw=true" alt="Card image cap">
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Efficient Neural Architecture Search with Network Morphism</h5>
+              <!-- 25812 -->
+              <small>Network morphism, which keeps the functionality of a neural network while changing its neural architecture, could be helpful for NAS by enabling a more efficient training during the search. In this paper, we propose a novel framework enabling Bayesian optimization to guide the network morphism for efficient neural architecture search by introducing a neural network kernel and a tree-structured acquisition function optimization algorithm.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                2,938
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.21 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1806.10282v1" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/jhfjhfj1/autokeras" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          10
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  
+                    <img class="card-img-top" src="static/thumbs/1808.10000.jpg"  alt="Card image cap">
+                  
+
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Grammar Induction with Neural Language Models: An Unusual Replication</h5>
+              <!-- 35877 -->
+              <small>A substantial thread of recent work on latent tree learning has attempted to develop neural network models with parse-valued latent variables and train them on non-parsing tasks, in the hope of having them discover interpretable tree structure. In a recent paper, Shen et al. (2018) introduce such a model and report near-state-of-the-art results on the target task of language modeling, and the first strong latent tree learning result on constituency parsing.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                17
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.19 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1808.10000v1" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/nyu-mll/PRPN-Analysis" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          11
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  
+                    <img class="card-img-top" src="static/thumbs/1711.02013.jpg"  alt="Card image cap">
+                  
+
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Neural Language Modeling by Jointly Learning Syntax and Lexicon</h5>
+              <!-- 35881 -->
+              <small>Standard recurrent neural networks are limited by their structure and fail to efficiently use syntactic information. In this paper, We propose a novel neural language model, called the Parsing-Reading-Predict Networks (PRPN), that can simultaneously induce the syntactic structure from unannotated sentences and leverage the inferred structure to learn a better language model.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                17
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.19 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1711.02013v2" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/nyu-mll/PRPN-Analysis" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          12
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  
+                    <img class="card-img-top" src="static/thumbs/1807.03146.jpg"  alt="Card image cap">
+                  
+
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>models</h5>
+              <!-- 30321 -->
+              <small>Models and examples built with TensorFlow</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                40,805
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.18 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1807.03146v1" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/tensorflow/models" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/tf.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          13
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  
+                    <img class="card-img-top" src="static/thumbs/1806.11538.jpg"  alt="Card image cap">
+                  
+
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Factorizable Net: An Efficient Subgraph-based Framework for Scene Graph
+  Generation</h5>
+              <!-- 35426 -->
+              <small>Generating scene graph to describe all the relations inside an image gains increasing interests these years. However, most of the previous methods use complicated structures with slow inference speed or rely on the external data, which limits the usage of the model in real-life scenarios.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                35
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.17 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1806.11538v2" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/yikang-li/FactorizableNet" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/pytorch.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          14
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  
+                    <img class="card-img-top" src="static/thumbs/1807.06587.jpg"  alt="Card image cap">
+                  
+
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Deep Exemplar-based Colorization</h5>
+              <!-- 36130 -->
+              <small>More importantly, as opposed to other learning-based colorization methods, our network allows the user to achieve customizable results by simply feeding different references. The colorization can be performed fully automatically by simply picking the top reference suggestion.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                21
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.17 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1807.06587v2" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/msracver/Deep-Exemplar-based-Colorization" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/pytorch.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          15
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  
+                    <img class="card-img-top" src="static/thumbs/1807.04067.jpg"  alt="Card image cap">
+                  
+
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>MultiPoseNet: Fast Multi-Person Pose Estimation using Pose Residual
+  Network</h5>
+              <!-- 30897 -->
+              <small>In this paper, we present MultiPoseNet, a novel bottom-up multi-person pose estimation architecture that combines a multi-task model with a novel assignment method. MultiPoseNet can jointly handle person detection, keypoint detection, person segmentation and pose estimation problems.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                79
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.16 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1807.04067v1" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/salihkaragoz/pose-residual-network-pytorch" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/pytorch.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          16
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  <img class="card-img-top" src="https://raw.githubusercontent.com/HsinYingLee/DRIT/master/imgs/final.gif" alt="Card image cap">
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Diverse Image-to-Image Translation via Disentangled Representations</h5>
+              <!-- 31835 -->
+              <small>In this work, we present an approach based on disentangled representation for producing diverse outputs without paired training images. Our model takes the encoded content features extracted from a given input and the attribute vectors sampled from the attribute space to produce diverse outputs at test time.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                158
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.15 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1808.00948v1" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/HsinYingLee/DRIT" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/pytorch.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          17
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  <img class="card-img-top" src="http://zhirongw.westus2.cloudapp.azure.com/figs/snca.png" alt="Card image cap">
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Improving Generalization via Scalable Neighborhood Component Analysis</h5>
+              <!-- 33501 -->
+              <small>Current major approaches to visual recognition follow an end-to-end formulation that classifies an input image into one of the pre-determined set of semantic categories. Parametric softmax classifiers are a common choice for such a closed world with fixed categories, especially when big labeled data is available during training.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                47
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.14 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1808.04699v1" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/Microsoft/snca.pytorch" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/pytorch.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          18
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  
+                    <img class="card-img-top" src="static/thumbs/1806.04808.jpg"  alt="Card image cap">
+                  
+
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Learning Representations of Ultrahigh-dimensional Data for Random
+  Distance-based Outlier Detection</h5>
+              <!-- 35512 -->
+              <small>However, existing unsupervised representation learning methods mainly focus on preserving the data regularity information and learning the representations independently of subsequent outlier detection methods, which can result in suboptimal and unstable performance of detecting irregularities (i.e., outliers). This customized learning yields more optimal and stable representations for the targeted outlier detectors.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                88
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.14 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1806.04808v1" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/yzhao062/anomaly-detection-resources" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          19
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  
+                    <img class="card-img-top" src="static/thumbs/1507.08104.jpg"  alt="Card image cap">
+                  
+
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Learning Representations for Outlier Detection on a Budget</h5>
+              <!-- 35513 -->
+              <small>Two approaches have emerged to tackle this problem: unsupervised and supervised. We demonstrate the good performance of BORE compared to a variety of competing methods in the non-budgeted and the budgeted outlier detection problem on 12 real-world datasets.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                88
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.14 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1507.08104v1" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/yzhao062/anomaly-detection-resources" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          20
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  
+                    <img class="card-img-top" src="static/thumbs/1711.10589.jpg"  alt="Card image cap">
+                  
+
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Contextual Outlier Interpretation</h5>
+              <!-- 35514 -->
+              <small>Outlier detection plays an essential role in many data-driven applications to identify isolated instances that are different from the majority. While many statistical learning and data mining techniques have been used for developing more effective outlier detection algorithms, the interpretation of detected outliers does not receive much attention.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                88
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.14 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1711.10589v3" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/yzhao062/anomaly-detection-resources" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          21
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  
+                    <img class="card-img-top" src="static/thumbs/1712.00559.jpg"  alt="Card image cap">
+                  
+
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Progressive Neural Architecture Search</h5>
+              <!-- 11688 -->
+              <small>We propose a new method for learning the structure of convolutional neural networks (CNNs) that is more efficient than recent state-of-the-art methods based on reinforcement learning and evolutionary algorithms. Our approach uses a sequential model-based optimization (SMBO) strategy, in which we search for structures in order of increasing complexity, while simultaneously learning a surrogate model to guide the search through structure space.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                1,937
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.13 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1712.00559v3" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/Cadene/pretrained-models.pytorch" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/pytorch.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          22
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  <div class="card-img-top">
+                    <iframe width="100%" src="https://www.youtube.com/embed/OOT3UIXZztE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                  </div>
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Mask R-CNN</h5>
+              <!-- 11349 -->
+              <small>Our approach efficiently detects objects in an image while simultaneously generating a high-quality segmentation mask for each instance. We show top results in all three tracks of the COCO suite of challenges, including instance segmentation, bounding-box object detection, and person keypoint detection.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                7,376
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.13 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1703.06870v3" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/matterport/Mask_RCNN" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/tf.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          23
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  <img class="card-img-top" src="https://user-images.githubusercontent.com/22609465/41505074-52078984-71b5-11e8-87af-15f19b43c450.png" alt="Card image cap">
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Wide Activation for Efficient and Accurate Image Super-Resolution</h5>
+              <!-- 35349 -->
+              <small>In this report we demonstrate that with same parameters and computational budgets, models with wider features before ReLU activation have significantly better performance for single image super-resolution (SISR). The resulted SR residual network has a slim identity mapping pathway with wider (\(2\times\) to \(4\times\)) channels before activation in each residual block.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                93
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.13 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1808.08718v1" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/JiahuiYu/wdsr_ntire2018" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/pytorch.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          24
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  <img class="card-img-top" src="http://yusukematsui.me/project/sketch2manga/img/manga109_api_example.png" alt="Card image cap">
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Object Detection for Comics using Manga109 Annotations</h5>
+              <!-- 36062 -->
+              <small>Although convolutional neural networks (CNN)-based methods archived good performance in object detection for naturalistic images, there are two problems in applying these methods to the comic object detection task. We annotated an existing image dataset of comics and created the largest annotation dataset, named Manga109-annotations.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                5
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.12 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1803.08670v2" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/matsui528/manga109api" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          25
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  <img class="card-img-top" src="https://raw.githubusercontent.com/facebookresearch/detectron/master/demo/output/33823288584_1d21cf0a26_k_example_output.jpg" alt="Card image cap">
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Detectron</h5>
+              <!-- 10918 -->
+              <small>FAIR&#39;s research platform for object detection research, implementing popular algorithms like Mask R-CNN and RetinaNet.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                16,024
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.12 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1703.06870v3" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/facebookresearch/detectron" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/caffe2.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          26
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  
+                    <img class="card-img-top" src="static/thumbs/1607.04606.jpg"  alt="Card image cap">
+                  
+
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Enriching Word Vectors with Subword Information</h5>
+              <!-- 6916 -->
+              <small>Continuous word representations, trained on large unlabeled corpora are useful for many natural language processing tasks. A vector representation is associated to each character $n$-gram; words being represented as the sum of these representations.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                15,459
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.12 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1607.04606v2" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/facebookresearch/fastText" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          27
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  
+                    <img class="card-img-top" src="static/thumbs/1612.03651.jpg"  alt="Card image cap">
+                  
+
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>FastText.zip: Compressing text classification models</h5>
+              <!-- 8461 -->
+              <small>We consider the problem of producing compact architectures for text classification, such that the full model fits in a limited amount of memory. After considering different solutions inspired by the hashing literature, we propose a method built upon product quantization to store word embeddings.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                15,459
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.12 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1612.03651v1" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/facebookresearch/fastText" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          28
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  
+                    <img class="card-img-top" src="static/thumbs/1607.01759.jpg"  alt="Card image cap">
+                  
+
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Bag of Tricks for Efficient Text Classification</h5>
+              <!-- 9229 -->
+              <small>This paper explores a simple and efficient baseline for text classification. Our experiments show that our fast text classifier fastText is often on par with deep learning classifiers in terms of accuracy, and many orders of magnitude faster for training and evaluation.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                15,459
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.12 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1607.01759v3" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/facebookresearch/fastText" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          29
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  
+                    <img class="card-img-top" src="static/thumbs/1804.07573.jpg"  alt="Card image cap">
+                  
+
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>MobileFaceNets: Efficient CNNs for Accurate Real-Time Face Verification
+  on Mobile Devices</h5>
+              <!-- 25072 -->
+              <small>We present a class of extremely efficient CNN models, MobileFaceNets, which use less than 1 million parameters and are specifically tailored for high-accuracy real-time face verification on mobile and embedded devices. The weakness has been well overcome by our specifically designed MobileFaceNets.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                49
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.11 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1804.07573v4" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/qidiso/mobilefacenet-V2" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          30
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  
+                    <img class="card-img-top" src="static/thumbs/1808.09644.jpg"  alt="Card image cap">
+                  
+
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>On Tree-Based Neural Sentence Modeling</h5>
+              <!-- 35717 -->
+              <small>To study the effectiveness of different tree structures, we replace the parsing trees with trivial trees (i.e., binary balanced tree, left-branching tree and right-branching tree) in the encoders. Though trivial trees contain no syntactic information, those encoders get competitive or even better results on all of the ten downstream tasks we investigated.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                19
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.11 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1808.09644v1" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/ExplorerFreda/TreeEnc" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/pytorch.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          31
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  
+                    <img class="card-img-top" src="static/thumbs/1805.06504.jpg"  alt="Card image cap">
+                  
+
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Analogical Reasoning on Chinese Morphological and Semantic Relations</h5>
+              <!-- 1367 -->
+              <small>Analogical reasoning is effective in capturing linguistic regularities. This paper proposes an analogical reasoning task on Chinese.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                2,481
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.10 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1805.06504v1" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/Embedding/Chinese-Word-Vectors" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          32
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  <div class="card-img-top">
+                    <iframe width="100%" src="https://www.youtube.com/embed/3AIpPlzM_qs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                  </div>
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>High-Resolution Image Synthesis and Semantic Manipulation with
+  Conditional GANs</h5>
+              <!-- 11731 -->
+              <small>We present a new method for synthesizing high-resolution photo-realistic images from semantic label maps using conditional generative adversarial networks (conditional GANs). Conditional GANs have enabled a variety of applications, but the results are often limited to low-resolution and still far from realistic.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                2,312
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.10 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1711.11585v2" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/NVIDIA/pix2pixHD" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/pytorch.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          33
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  <img class="card-img-top" src="https://user-images.githubusercontent.com/16640218/34506318-84d0c06c-efe0-11e7-8831-0425772ed8f2.png" alt="Card image cap">
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Horovod: fast and easy distributed deep learning in TensorFlow</h5>
+              <!-- 3413 -->
+              <small>Training modern deep learning models requires large amounts of computation, often provided by GPUs. Depending on the particular methods employed, this communication may entail anywhere from negligible to significant overhead.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                3,616
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.10 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1802.05799v3" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/uber/horovod" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/tf.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          34
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  
+                    <img class="card-img-top" src="static/thumbs/1802.09464.jpg"  alt="Card image cap">
+                  
+
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Multi-Goal Reinforcement Learning: Challenging Robotics Environments and
+  Request for Research</h5>
+              <!-- 3018 -->
+              <small>The purpose of this technical report is two-fold. First of all, it introduces a suite of challenging continuous control tasks (integrated with OpenAI Gym) based on currently existing robotics hardware.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                13,453
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.10 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1802.09464v2" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/openai/gym" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/tf.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          35
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  
+                    <img class="card-img-top" src="static/thumbs/1606.01540.jpg"  alt="Card image cap">
+                  
+
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>OpenAI Gym</h5>
+              <!-- 11408 -->
+              <small>OpenAI Gym is a toolkit for reinforcement learning research. It includes a growing collection of benchmark problems that expose a common interface, and a website where people can share their results and compare the performance of algorithms.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                13,453
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.10 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1606.01540v1" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/openai/gym" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/tf.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          36
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  <img class="card-img-top" src="https://raw.githubusercontent.com/slundberg/shap/master/docs/artwork/shap_diagram.png" alt="Card image cap">
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Axiomatic Attribution for Deep Networks</h5>
+              <!-- 28642 -->
+              <small>We study the problem of attributing the prediction of a deep network to its input features, a problem previously studied by several other works. We identify two fundamental axioms---Sensitivity and Implementation Invariance that attribution methods ought to satisfy.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                1,963
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.10 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1703.01365v2" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/slundberg/esvalues" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/tf.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          37
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  <img class="card-img-top" src="https://raw.githubusercontent.com/slundberg/shap/master/docs/artwork/shap_diagram.png" alt="Card image cap">
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>SmoothGrad: removing noise by adding noise</h5>
+              <!-- 28643 -->
+              <small>Explaining the output of a deep network remains a challenge. In the case of an image classifier, one type of explanation is to identify pixels that strongly influence the final decision.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                1,963
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.10 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1706.03825v1" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/slundberg/esvalues" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/tf.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          38
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  <img class="card-img-top" src="https://badge.fury.io/py/wikipedia2vec.png" alt="Card image cap">
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Joint Learning of the Embedding of Words and Entities for Named Entity
+  Disambiguation</h5>
+              <!-- 11371 -->
+              <small>In this paper, we propose a novel embedding method specifically designed for NED. The KB graph model learns the relatedness of entities using the link structure of the KB, whereas the anchor context model aims to align vectors such that similar words and entities occur close to one another in the vector space by leveraging KB anchors and their context words.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                168
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.09 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1601.01343v4" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/wikipedia2vec/wikipedia2vec" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          39
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  <img class="card-img-top" src="https://raw.githubusercontent.com/allenai/allennlp/master/doc/static/allennlp-logo-dark.png" alt="Card image cap">
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>AllenNLP: A Deep Semantic Natural Language Processing Platform</h5>
+              <!-- 679 -->
+              <small>This paper describes AllenNLP, a platform for research on deep learning methods in natural language understanding. AllenNLP is designed to support researchers who want to build novel language understanding models quickly and easily.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                3,127
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.09 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1803.07640v2" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/allenai/allennlp" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/pytorch.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          40
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  
+                    <img class="card-img-top" src="static/thumbs/1712.05889.jpg"  alt="Card image cap">
+                  
+
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Ray: A Distributed Framework for Emerging AI Applications</h5>
+              <!-- 12017 -->
+              <small>The next generation of AI applications will continuously interact with the environment and learn from these interactions. These applications impose new and demanding systems requirements, both in terms of performance and flexibility.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                4,104
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.09 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1712.05889v1" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/ray-project/ray" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          41
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  <img class="card-img-top" src="https://raw.githubusercontent.com/slundberg/shap/master/docs/artwork/shap_diagram.png" alt="Card image cap">
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Consistent Individualized Feature Attribution for Tree Ensembles</h5>
+              <!-- 3 -->
+              <small>Interpreting predictions from tree ensemble methods such as gradient boosting machines and random forests is important, yet feature attribution for trees is often heuristic and not individualized for each prediction. Here we show that popular feature attribution methods are inconsistent, meaning they can lower a feature&#39;s assigned importance when the true impact of that feature actually increases.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                1,963
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.09 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1802.03888v2" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/slundberg/shap" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/tf.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          42
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  <img class="card-img-top" src="https://raw.githubusercontent.com/slundberg/shap/master/docs/artwork/shap_diagram.png" alt="Card image cap">
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Axiomatic Attribution for Deep Networks</h5>
+              <!-- 28638 -->
+              <small>We study the problem of attributing the prediction of a deep network to its input features, a problem previously studied by several other works. We identify two fundamental axioms---Sensitivity and Implementation Invariance that attribution methods ought to satisfy.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                1,963
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.09 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1703.01365v2" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/slundberg/shap" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/tf.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          43
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  <img class="card-img-top" src="https://raw.githubusercontent.com/slundberg/shap/master/docs/artwork/shap_diagram.png" alt="Card image cap">
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>SmoothGrad: removing noise by adding noise</h5>
+              <!-- 28639 -->
+              <small>Explaining the output of a deep network remains a challenge. In the case of an image classifier, one type of explanation is to identify pixels that strongly influence the final decision.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                1,963
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.09 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1706.03825v1" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/slundberg/shap" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/tf.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          44
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  <img class="card-img-top" src="https://raw.githubusercontent.com/dmlc/dmlc.github.io/master/img/logo-m/xgboost.png" alt="Card image cap">
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>XGBoost: A Scalable Tree Boosting System</h5>
+              <!-- 9514 -->
+              <small>In this paper, we describe a scalable end-to-end tree boosting system called XGBoost, which is used widely by data scientists to achieve state-of-the-art results on many machine learning challenges. We propose a novel sparsity-aware algorithm for sparse data and weighted quantile sketch for approximate tree learning.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                13,322
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.08 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1603.02754v3" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/dmlc/xgboost" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          45
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  <div class="card-img-top">
+                    <iframe width="100%" src="https://www.youtube.com/embed/l1FqtAHfJLI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                  </div>
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Large-Scale Study of Curiosity-Driven Learning</h5>
+              <!-- 33938 -->
+              <small>However, annotating each environment with hand-designed, dense rewards is not scalable, motivating the need for developing reward functions that are intrinsic to the agent. In this paper: (a) We perform the first large-scale study of purely curiosity-driven learning, i.e. without any extrinsic rewards, across 54 standard benchmark environments, including the Atari game suite.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                157
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.08 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1808.04355v1" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/openai/large-scale-curiosity" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/tf.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          46
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  
+                    <img class="card-img-top" src="static/thumbs/1512.02325.jpg"  alt="Card image cap">
+                  
+
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>SSD: Single Shot MultiBox Detector</h5>
+              <!-- 11969 -->
+              <small>We present a method for detecting objects in images using a single deep neural network. Experimental results on the PASCAL VOC, MS COCO, and ILSVRC datasets confirm that SSD has comparable accuracy to methods that utilize an additional object proposal step and is much faster, while providing a unified framework for both training and inference.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                2,233
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.08 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1512.02325v5" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/balancap/SSD-Tensorflow" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/tf.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          47
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  <img class="card-img-top" src="https://user-images.githubusercontent.com/4953728/44685365-968ea500-aa4b-11e8-8615-684120f13953.png" alt="Card image cap">
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Training wide residual networks for deployment using a single bit for
+  each weight</h5>
+              <!-- 35415 -->
+              <small>For fast and energy-efficient deployment of trained deep neural networks on resource-constrained embedded hardware, each learned weight parameter should ideally be represented and stored using a single bit. Using wide residual networks as our main baseline, our approach simplifies existing methods that binarize weights by applying the sign function in training; we apply scaling factors for each layer with constant unlearned values equal to the layer-specific standard deviations used for initialization.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                65
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.08 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1802.08530v1" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/szagoruyko/binary-wide-resnet" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/pytorch.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          48
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  <div class="card-img-top">
+                    <iframe width="100%" src="https://www.youtube.com/embed/KYueHEMGRos" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                  </div>
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Focal Loss for Dense Object Detection</h5>
+              <!-- 26981 -->
+              <small>We propose to address this class imbalance by reshaping the standard cross entropy loss such that it down-weights the loss assigned to well-classified examples. Our novel Focal Loss focuses training on a sparse set of hard examples and prevents the vast number of easy negatives from overwhelming the detector during training.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                1,529
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.08 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1708.02002v2" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/fizyr/keras-retinanet" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          49
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  <img class="card-img-top" src="https://raw.githubusercontent.com/EpistasisLab/tpot/master/images/tpot-logo.jpg" alt="Card image cap">
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Evaluation of a Tree-based Pipeline Optimization Tool for Automating
+  Data Science</h5>
+              <!-- 9857 -->
+              <small>As the field of data science continues to grow, there will be an ever-increasing demand for tools that make machine learning accessible to non-experts. In this paper, we introduce the concept of tree-based pipeline optimization for automating one of the most tedious parts of machine learning---pipeline design.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                4,541
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.08 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1603.06212v1" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/rhiever/tpot" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          50
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  <div class="card-img-top">
+                    <iframe width="100%" src="https://www.youtube.com/embed/vVU8XV0Ac_0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                  </div>
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>PWC-Net: CNNs for Optical Flow Using Pyramid, Warping, and Cost Volume</h5>
+              <!-- 21392 -->
+              <small>We present a compact but effective CNN model for optical flow, called PWC-Net. It then uses the warped features and features of the first image to construct a cost volume, which is processed by a CNN to estimate the optical flow.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                213
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.08 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1709.02371v3" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/NVlabs/PWC-Net" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/pytorch.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          51
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  <img class="card-img-top" src="https://user-images.githubusercontent.com/7347296/34198790-eb5bec96-e56b-11e7-90d5-157800e042de.png" alt="Card image cap">
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Semi-Supervised Classification with Graph Convolutional Networks</h5>
+              <!-- 8027 -->
+              <small>We present a scalable approach for semi-supervised learning on graph-structured data that is based on an efficient variant of convolutional neural networks which operate directly on graphs. We motivate the choice of our convolutional architecture via a localized first-order approximation of spectral graph convolutions.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                1,514
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.07 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1609.02907v4" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/tkipf/gcn" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/tf.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          52
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  <img class="card-img-top" src="https://user-images.githubusercontent.com/7347296/34198790-eb5bec96-e56b-11e7-90d5-157800e042de.png" alt="Card image cap">
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Revisiting Semi-Supervised Learning with Graph Embeddings</h5>
+              <!-- 12313 -->
+              <small>We present a semi-supervised learning framework based on graph embeddings. Given a graph between instances, we train an embedding for each instance to jointly predict the class label and the neighborhood context in the graph.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                1,514
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.07 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1603.08861v2" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/tkipf/gcn" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/tf.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          53
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  <img class="card-img-top" src="https://user-images.githubusercontent.com/7347296/34198790-eb5bec96-e56b-11e7-90d5-157800e042de.png" alt="Card image cap">
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Convolutional Neural Networks on Graphs with Fast Localized Spectral
+  Filtering</h5>
+              <!-- 12314 -->
+              <small>In this work, we are interested in generalizing convolutional neural networks (CNNs) from low-dimensional regular grids, where image, video and speech are represented, to high-dimensional irregular domains, such as social networks, brain connectomes or words&#39; embedding, represented by graphs. We present a formulation of CNNs in the context of spectral graph theory, which provides the necessary mathematical background and efficient numerical schemes to design fast localized convolutional filters on graphs.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                1,514
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.07 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1606.09375v3" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/tkipf/gcn" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/tf.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          54
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  <img class="card-img-top" src="https://raw.githubusercontent.com/MagicLeapResearch/SuperPointPretrainedNetwork/master/assets/magicleap.png" alt="Card image cap">
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>SuperPoint: Self-Supervised Interest Point Detection and Description</h5>
+              <!-- 17483 -->
+              <small>This paper presents a self-supervised framework for training interest point detectors and descriptors suitable for a large number of multiple-view geometry problems in computer vision. As opposed to patch-based neural networks, our fully-convolutional model operates on full-sized images and jointly computes pixel-level interest point locations and associated descriptors in one forward pass.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                253
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.07 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1712.07629v4" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/pytorch.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          55
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  <img class="card-img-top" src="http://opennmt.github.io/simple-attn.png" alt="Card image cap">
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>OpenNMT: Neural Machine Translation Toolkit</h5>
+              <!-- 35949 -->
+              <small>OpenNMT is an open-source toolkit for neural machine translation (NMT). The system prioritizes efficiency, modularity, and extensibility with the goal of supporting NMT research into model architectures, feature representations, and source modalities, while maintaining competitive performance and reasonable training requirements.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                1,834
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.07 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1805.11462v1" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/OpenNMT/OpenNMT-py" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/pytorch.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          56
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  <img class="card-img-top" src="https://raw.githubusercontent.com/endernewton/tf-faster-rcnn/master/data/imgs/gt.png" alt="Card image cap">
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>tf-faster-rcnn</h5>
+              <!-- 7576 -->
+              <small>Tensorflow Faster RCNN for Object Detection</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                1,928
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.07 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1704.04224v1" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/endernewton/tf-faster-rcnn" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/tf.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          57
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  <img class="card-img-top" src="https://raw.githubusercontent.com/SKTBrain/DiscoGAN/master/assets/discogan.png" alt="Card image cap">
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Learning to Discover Cross-Domain Relations with Generative Adversarial
+  Networks</h5>
+              <!-- 7297 -->
+              <small>While humans easily recognize relations between data from different domains without any supervision, learning to automatically discover them is in general very challenging and needs many ground-truth pairs that illustrate the relations. To avoid costly pairing, we address the task of discovering cross-domain relations given unpaired data.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                595
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.06 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1703.05192v2" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/SKTBrain/DiscoGAN" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/pytorch.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          58
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  
+                    <img class="card-img-top" src="static/thumbs/1805.03294.jpg"  alt="Card image cap">
+                  
+
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Improved training of end-to-end attention models for speech recognition</h5>
+              <!-- 35486 -->
+              <small>Sequence-to-sequence attention-based models on subword units allow simple open-vocabulary end-to-end speech recognition. In this work, we show that such models can achieve competitive results on the Switchboard 300h and LibriSpeech 1000h tasks.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                621
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.06 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1805.03294v1" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/espnet/espnet" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/pytorch.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          59
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  
+                    <img class="card-img-top" src="static/thumbs/1807.04067.jpg"  alt="Card image cap">
+                  
+
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>MultiPoseNet: Fast Multi-Person Pose Estimation using Pose Residual
+  Network</h5>
+              <!-- 33557 -->
+              <small>In this paper, we present MultiPoseNet, a novel bottom-up multi-person pose estimation architecture that combines a multi-task model with a novel assignment method. MultiPoseNet can jointly handle person detection, keypoint detection, person segmentation and pose estimation problems.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                11
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.06 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1807.04067v1" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/IcewineChen/pytorch-MultiPoseNet" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/pytorch.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          60
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  
+                    <img class="card-img-top" src="static/thumbs/1710.10903.jpg"  alt="Card image cap">
+                  
+
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Graph Attention Networks</h5>
+              <!-- 17255 -->
+              <small>We present graph attention networks (GATs), novel neural network architectures that operate on graph-structured data, leveraging masked self-attentional layers to address the shortcomings of prior methods based on graph convolutions or their approximations. By stacking layers in which nodes are able to attend over their neighborhoods&#39; features, we enable (implicitly) specifying different weights to different nodes in a neighborhood, without requiring any kind of costly matrix operation (such as inversion) or depending on knowing the graph structure upfront.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                225
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.06 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1710.10903v3" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/PetarV-/GAT" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          61
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  
+                    <img class="card-img-top" src="static/thumbs/1707.06799.jpg"  alt="Card image cap">
+                  
+
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Optimal Hyperparameters for Deep LSTM-Networks for Sequence Labeling
+  Tasks</h5>
+              <!-- 6122 -->
+              <small>Selecting optimal parameters for a neural network architecture can often make the difference between mediocre and state-of-the-art performance. However, little is published which parameters and design choices should be evaluated or selected making the correct hyperparameter optimization often a &quot;black art that requires expert experiences&quot; (Snoek et al., 2012).</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                427
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.06 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1707.06799v2" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/UKPLab/emnlp2017-bilstm-cnn-crf" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/tf.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          62
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  
+                    <img class="card-img-top" src="static/thumbs/1707.09861.jpg"  alt="Card image cap">
+                  
+
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Reporting Score Distributions Makes a Difference: Performance Study of
+  LSTM-networks for Sequence Tagging</h5>
+              <!-- 12758 -->
+              <small>In this paper we show that reporting a single performance score is insufficient to compare non-deterministic approaches. We demonstrate for common sequence tagging tasks that the seed value for the random number generator can result in statistically significant (p &lt; 10^-4) differences for state-of-the-art systems.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                427
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.06 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1707.09861v1" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/UKPLab/emnlp2017-bilstm-cnn-crf" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/tf.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          63
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  
+                    <img class="card-img-top" src="static/thumbs/1807.02291.jpg"  alt="Card image cap">
+                  
+
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Sliced Recurrent Neural Networks</h5>
+              <!-- 26244 -->
+              <small>However, they have difficulty in parallelization because of the recurrent structure, so it takes much time to train RNNs. In this paper, we introduce sliced recurrent neural networks (SRNNs), which could be parallelized by slicing the sequences into many subsequences.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                246
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.06 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1807.02291v1" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/zepingyu0512/srnn" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/tf.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          64
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  
+                    <img class="card-img-top" src="static/thumbs/1609.06570.jpg"  alt="Card image cap">
+                  
+
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Imbalanced-learn: A Python Toolbox to Tackle the Curse of Imbalanced
+  Datasets in Machine Learning</h5>
+              <!-- 9032 -->
+              <small>Imbalanced-learn is an open-source python toolbox aiming at providing a wide range of methods to cope with the problem of imbalanced dataset frequently encountered in machine learning and pattern recognition. The implemented state-of-the-art methods can be categorized into 4 groups: (i) under-sampling, (ii) over-sampling, (iii) combination of over- and under-sampling, and (iv) ensemble learning methods.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                2,424
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.06 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1609.06570v1" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/scikit-learn-contrib/imbalanced-learn" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/tf.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          65
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  
+                    <img class="card-img-top" src="static/thumbs/1503.03832.jpg"  alt="Card image cap">
+                  
+
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>FaceNet: A Unified Embedding for Face Recognition and Clustering</h5>
+              <!-- 11391 -->
+              <small>Despite significant recent advances in the field of face recognition, implementing face verification and recognition efficiently at scale presents serious challenges to current approaches. On the widely used Labeled Faces in the Wild (LFW) dataset, our system achieves a new record accuracy of 99.63%.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                5,617
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.06 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1503.03832v3" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/davidsandberg/facenet" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/tf.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          66
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  
+                    <img class="card-img-top" src="static/thumbs/1801.07791.jpg"  alt="Card image cap">
+                  
+
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>PointCNN</h5>
+              <!-- 3935 -->
+              <small>However, point cloud are irregular and unordered, thus a direct convolving of kernels against the features associated with the points will result in deserting the shape information while being variant to the orders. The proposed method is a generalization of typical CNNs into learning features from point cloud, thus we call it PointCNN.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                451
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.06 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1801.07791v3" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/yangyanli/PointCNN" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/tf.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          67
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  <img class="card-img-top" src="https://ipavlov.ai/img/ipavlov_footer.png" alt="Card image cap">
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>DeepPavlov</h5>
+              <!-- 14149 -->
+              <small>An open source library for deep learning end-to-end dialog systems and chatbots.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                2,074
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.06 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1709.09686v2" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/deepmipt/DeepPavlov" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/tf.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          68
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  <img class="card-img-top" src="https://raw.githubusercontent.com/XingangPan/IBN-Net/master/./utils/IBNNet.png" alt="Card image cap">
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Two at Once: Enhancing Learning and Generalization Capacities via
+  IBN-Net</h5>
+              <!-- 30165 -->
+              <small>IBN-Net carefully integrates Instance Normalization (IN) and Batch Normalization (BN) as building blocks, and can be wrapped into many advanced deep networks to improve their performances. (3) When applying the trained networks to new domains, e.g. from GTA5 to Cityscapes, IBN-Net achieves comparable improvements as domain adaptation methods, even without using data from the target domain.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                283
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.06 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1807.09441v2" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/XingangPan/IBN-Net" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/pytorch.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          69
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  
+                    <img class="card-img-top" src="static/thumbs/1808.03867.jpg"  alt="Card image cap">
+                  
+
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>Pervasive Attention: 2D Convolutional Neural Networks for
+  Sequence-to-Sequence Prediction</h5>
+              <!-- 35752 -->
+              <small>Current state-of-the-art machine translation systems are based on encoder-decoder architectures, that first encode the input sequence, and then generate an output sequence based on the input encoding. Both are interfaced with an attention mechanism that recombines a fixed encoding of the source tokens based on the decoder state.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                286
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.06 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1808.03867v1" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/elbayadm/attn2d" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/pytorch.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="container list-container">
+
+
+      <div class="row upper-level">
+
+        <div class="col-xs d-none d-lg-block">
+          70
+        </div>
+        <div class="col">
+
+          <div class="row">
+
+            <div class="col-lg-2 col-mp">
+
+              <div class="col-image">
+                
+
+                  
+                    <img class="card-img-top" src="static/thumbs/1804.00247.jpg"  alt="Card image cap">
+                  
+
+
+                
+
+              </div>
+
+
+            </div>
+            <div class="col">
+              <h5>tensor2tensor</h5>
+              <!-- 1636 -->
+              <small>Library of deep learning models and datasets designed to make deep learning more accessible and accelerate ML research.</small>
+
+            </div>
+
+            <div class="col-lg-2 col-mp" style="padding-bottom:8px;">
+
+
+              <div class="stars">
+                4,891
+                <ion-icon name="star" style="position:relative;top:2px;"></ion-icon>
+                
+                  <div class="stars-accumulated text-center">
+                    0.06 stars / hour
+                  </div>
+                
+                
+              </div>
+
+              <a target="_blank"  href="https://arxiv.org/abs/1804.00247v2" class="btn btn-primary"><ion-icon name="copy"></ion-icon> &nbsp;Paper</a>
+              <a target="_blank"  href="https://github.com/tensorflow/tensor2tensor" class="btn btn-success">
+                <ion-icon name="logo-github" style="position:relative;top:2px;"></ion-icon> &nbsp;Code
+              </a>
+
+              
+                <div class="framework-img">
+                  <img src="static/frameworks/tf.png">
+                </div>
+              
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+
+
+
+
+  </div>
+
+  <div class="footer">
+    Made by <a href="https://twitter.com/rbstojnic">@rbstojnic</a> and <a href="https://twitter.com/rosstaylor90">@rosstaylor90</a> in spare time.  Contact us at <ion-icon name="mail" style="position:relative;top:2px"></ion-icon>
+    <a href="/cdn-cgi/l/email-protection#224a474e4e4d62524352475051554b564a414d46470c414d4f"><span class="__cf_email__" data-cfemail="761e131a1a1936061706130405011f021e151912135815191b">[email&#160;protected]</span></a>
+  </div>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/static/js/src-noconflict/ace.8c91198b60a9.js" type="text/javascript" charset="utf-8"></script>
+
+  <script>
+      var editor = ace.edit("editor");
+      editor.container.classList.add("myEditor");
+      editor.setTheme("ace/theme/chrome");
+      editor.setFontSize(16);
+      editor.getSession().setMode("ace/mode/python");
+      editor.setReadOnly(true);
+      editor.setOption("showPrintMargin", false);
+      editor.setOption('showGutter', true);
+      editor.setOption("highlightActiveLine", false);
+
+      editor.setOptions({
+          maxLines: 5000
+      });
+  </script>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</body>
+</html>
